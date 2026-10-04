@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>JScript REPL</title>
+    <style>
+        span {
+            color: #ff0000;
+        }
+
+        tt {
+            color: #ce9178;
+        }
+
+        var {
+            color: #9cdcfe;
+            font-style: normal;
+        }
+
+        input,
+        body,
+        div {
+            border: 0;
+            background: #1f1f1f;
+            color: #d4d4c9;
+            font-size: 11px;
+            font-family: "Courier New";
+        }
+    </style>
+    <script>
+        include("./src/repl.js")
+        include("./src/fetch.js")
+        include("./src/json.js")
+        include("./src/benchmark.js")
+    </script>
+</head>
+
+<body TOPMARGIN=0 LEFTMARGIN=0 RIGHTMARGIN=0 BOTTOMMARGIN=0>
+    <div id="textbox"></div>
+
+    &gt; <input type="text" id="commandbox" size="77" onkeydown=keyHandler()>
+    <input type="button" value="{}" onclick="document.all.commandbox.value+='{}'">
+    <input type="button" value="[]" onclick="document.all.commandbox.value+='[]'">
+</body>
+</html>

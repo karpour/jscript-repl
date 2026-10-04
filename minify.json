@@ -1,0 +1,7 @@
+{
+  "$schema": "https://raw.githubusercontent.com/j9t/html-minifier-next/main/html-minifier-next.schema.json",
+  "collapseWhitespace": false,
+  "removeComments": true,
+  "minifyJS": true,
+  "minifyCSS": true
+}

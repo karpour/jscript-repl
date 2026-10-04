@@ -1,0 +1,17 @@
+#!/bin/awk -f
+
+# Replaces lines containing `include("filename.ext")` with the contents of the referred file
+
+{ 
+    if(match($0, /[ \t]*include[ \t]*\([ \t]*"[^"]+"[ \t]*\)/)) { 
+        dir=substr($0,RSTART,RLENGTH); 
+        match(dir,/"[^"]+"/); 
+        file=substr(dir,RSTART+1,RLENGTH-2); 
+        while((getline ln < file) > 0) { 
+            print ln 
+        } 
+        close(file); 
+    } else {
+        print
+    }
+}

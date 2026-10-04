@@ -1,0 +1,22 @@
+span {
+    color: #ff0000;
+}
+
+tt {
+    color: #ce9178;
+}
+
+var {
+    color: #9cdcfe;
+    font-style: normal;
+}
+
+input,
+body,
+div {
+    border: 0;
+    background: #1f1f1f;
+    color: #d4d4c9;
+    font-size: 11px;
+    font-family: "Courier New";
+}
